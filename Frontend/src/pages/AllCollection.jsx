@@ -14,7 +14,7 @@ function AllCollection() {
       const token = localStorage.getItem("token"); // ধরে নিচ্ছি JWT এখানে স্টোর করছো
 
       const res = await axios.get(
-        `http://localhost:8000/api/v1/url/admin/urls?page=${pageNo}&limit=10`,
+        `https://url-shorter-app.onrender.com/api/v1/url/admin/urls?page=${pageNo}&limit=10`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -67,7 +67,7 @@ function AllCollection() {
                 >
                   <td className="p-2 text-blue-500">
                     <a
-                      href={`http://localhost:8000/${url.short_code}`}
+                      href={`https://url-shorter-app.onrender.com/${url.short_code}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >

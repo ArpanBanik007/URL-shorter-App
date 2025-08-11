@@ -35,7 +35,7 @@ function RegisterPage() {
         password: formData.password,
       };
 
-      const res = await axios.post("http://localhost:8000/api/v1/user/register", data);
+      const res = await axios.post("https://url-shorter-app.onrender.com/api/v1/user/register", data);
 
       setSuccess(res.data.message || "Registration successful!");
       setTimeout(() => {

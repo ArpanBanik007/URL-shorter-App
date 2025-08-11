@@ -21,12 +21,12 @@ function HomePage() {
     setLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/v1/url/shorten",
+        "https://url-shorter-app.onrender.com/api/v1/url/shorten",
         { original_url: longUrl.trim() }
       );
 
       const shortCode = response.data.data?.shortUrl || "";
-      const baseUrl = "http://localhost:8000";
+      const baseUrl = "https://url-shorter-app.onrender.com";
       const fullShortUrl = shortCode.startsWith("http")
         ? shortCode
         : `${baseUrl}/${shortCode}`;
